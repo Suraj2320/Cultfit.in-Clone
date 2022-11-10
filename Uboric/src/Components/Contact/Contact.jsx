@@ -19,7 +19,7 @@ import {
 import phone from "./images/phone.png";
 import message from "./images/message.png";
 
-export const Contact = () => {
+ const Contact = () => {
   return (
     <Box maxH="100vh" paddingBottom="300px" marginBottom="100px">
 
@@ -215,3 +215,6 @@ export const Contact = () => {
     </Box>
   )
 }
+
+
+export default Contact

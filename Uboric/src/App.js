@@ -1,17 +1,14 @@
-
+import logo from './logo.svg';
 // import './App.css';
-
-import About from './Components/About/About';
-import { Contact } from './Components/Contact/Contact';
+import AllRoutes from './component/AllRoutes';
 
 function App() {
   return (
     <div className="App">
-      
-    {/* <About/> */}
-    <Contact/>
+      <AllRoutes/>
     </div>
   );
 }
+
 
 export default App;
