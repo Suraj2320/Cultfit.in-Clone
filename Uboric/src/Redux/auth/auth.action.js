@@ -1,4 +1,5 @@
 import axios from "axios";
+import { signIn } from "./firebase";
 import {
   LOGIN_ERROR,
   LOGIN_REQUEST,
@@ -35,3 +36,11 @@ export const Logins = (creds) => async (dispatch) => {
 };
 
 export const Logout = () => ({ type: LOGOUT });
+
+
+// export const signInWithGoogle=()=>{
+//   signIn.then((res)=>{
+// console.log(res)
+//   })
+//   .catch((error)=>console.log(error))
+// }
