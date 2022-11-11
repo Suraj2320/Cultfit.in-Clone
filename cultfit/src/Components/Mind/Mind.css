@@ -1,0 +1,182 @@
+.mind-body{
+    padding-top: 60px;
+    width: 100%;
+    /* border: 1px solid red; */
+    @media screen and (max-width: 769px) {
+        /* flex-direction: column; */
+        padding-top: 0;
+    }
+}
+
+.mind-thearapy{
+    margin: auto;
+    width: 80%;
+    /* border: 1px solid red; */
+    margin-bottom: 50px;
+    font-family:'Open Sans', sans-serif;;
+}
+.mind-thearapy > img{
+    width: 100%;
+}
+
+.experts{
+    margin-left: 8%;
+    margin-bottom: 2%;
+    font: 55px;
+    font-weight: 700;
+    font-family:'Open Sans', sans-serif;
+}
+.secondline{
+    font-size: 12px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(64, 64, 64);
+    text-align: left;
+}
+.Mind-main-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    row-gap: 8%;
+    justify-content: center; 
+}
+.firstname{
+    font-size: 22px;
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-1{
+    border-radius: 10px;
+    width: 40%;
+    height: 250px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/9355d11a-f088-4f10-b9df-72ea3ecf8e0b.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+    padding-left: 20px;
+    padding-top: 20px;
+    /* line-height: 25px; */
+    /* margin-left: 20px ; */
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-2{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/9ce1d9a2-d3c6-4a19-91bd-028d52f58c84.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-3{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/5e9f8ee5-83dd-4dca-beca-61885323ce3c.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-4{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/84248218-f8c0-44d8-b2d6-be415b742b9a.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.Mind-child-5{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/dcd1728e-d7dc-4952-b552-b1b1c97e9ac1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-6{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/18a8d3b2-d262-4f78-908b-79a55a40ef68.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+
+}
+.Mind-child-7{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/1a2d8f7e-2c24-4cbf-88be-e2cf266dfa23.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+}
+.Mind-child-8{
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/aebc57c2-ee58-41f7-a854-00fb5c5d55f9.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:'Open Sans', sans-serif;;
+}
+.online-psy{ margin: auto;
+width: 80%;
+/* border: 1px solid red; */
+margin-bottom: 50px;
+}
+.online-psy > img{
+    width: 100%;
+}
+.join-med{
+     margin: auto;
+    width: 100%;
+    /* border: 1px solid red; */
+    /* margin-bottom: 50px; */
+ }
+ .join-med > img{
+     width: 100%;
+ }
+ .what-you-assure{
+    margin: auto;
+   max-width: 100%;
+   /* height: auto; */
+    /* border: 1px solid red; */
+    /* margin-bottom: 50px;  */
+ }
+ .what-you-assure > img{
+    width: 100%;
+}
+ .what-we-help{
+    margin: auto;
+    width: 100%;
+    /* border: 1px solid red; */
+    /* margin-bottom: 50px;  */
+    font-family:'Open Sans', sans-serif;;
+ }
+ .what-we-help > img{
+     width: 100%;
+ }
+ .mindfaqs{
+     height: 3%;
+     font-family:'Open Sans', sans-serif;
+ }
