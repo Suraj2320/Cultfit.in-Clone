@@ -12,7 +12,7 @@
 
 .homePage {
   color: white;
-  background-color: rgba(18, 21, 31);
+  // background-color: rgba(18, 21, 31);
 
   font-family: "Open Sans", sans-serif;
 
@@ -421,7 +421,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background: rgb(255 255 255 / 10%);
+          // background: rgb(255 255 255 / 10%);
           color: white;
           backdrop-filter: blur(50px);
           font-size: 14px;
@@ -430,7 +430,7 @@
           font-weight: 700;
           width: 45%;
           &:hover {
-            background: rgb(255 255 255 / 30%);
+            // background: rgb(255 255 255 / 30%);
           }
         }
 

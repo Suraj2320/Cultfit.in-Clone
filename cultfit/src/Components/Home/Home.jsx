@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import "./Home.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import Footer from "../Footer/Footer";
 import Slide from "./Slide";
 
@@ -29,7 +29,7 @@ const Home = () => {
     </div>
   ) : (
     <div className="homePage">
-      <Navbar path="home" />
+      {/* <Navbar path="home" /> */}
       {/* HOMEPAGE FIRST VEDIO POSTER STARTS */}
       <>
         <div className="homePage__video-poster-one">
@@ -601,5 +601,5 @@ const Home = () => {
   );
 };
 
-AOS.init({ offset: 300, duration: 2000 });
+// AOS.init({ offset: 300, duration: 2000 });
 export default Home;
