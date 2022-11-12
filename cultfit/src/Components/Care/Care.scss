@@ -1,0 +1,109 @@
+.care_page {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+}
+
+.care-body {
+  width: 100%;
+  position: sticky;
+  padding-top: 60px;
+}
+
+@media screen and (max-width: "1024px") {
+  .care-body {
+    width: 100%;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: "769px") {
+  .care-body {
+    width: 100%;
+    padding-top: 0%;
+  }
+}
+
+.store__sliderContainer {
+  width: 100%;
+}
+
+.specialities {
+  width: 90%;
+  margin: auto;
+  &__IndImage {
+    width: 100%;
+  }
+  &__IndDiv:hover {
+    opacity: 1;
+    transition-duration: 0.2s;
+    transform: scale(0.95);
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+  }
+  
+  &__head{
+    margin-top: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__para{
+    color: grey;
+    font-size: 0.9rem;
+  }
+
+  &__IndDiv > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__IndDiv > div > p {
+    font-size: 0.95rem;
+  }
+  &__IndDiv > div:last-child > p:last-child {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: "1024px") {
+    &__images{
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+  @media screen and (max-width: "769px") {
+    &__images{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+}
+
+.storeNav {
+  background-color: rgb(68, 67, 67);
+  color: white;
+  padding: 0.5%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+
+}
+.storeNav button{
+    border-radius: 5px;
+    padding: 0.4%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+    font-size: 1.02rem;
+}
+
+.first{
+    width: 70%;
+    margin: auto;
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+}
