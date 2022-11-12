@@ -40,6 +40,7 @@ import {
         };
       }
       case LOGOUT: {
+        console.log("logout")
         localStorage.removeItem("token");
         return {
           ...state,

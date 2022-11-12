@@ -2,7 +2,7 @@ import { Box, Button, DrawerHeader, Image, Input, Stack } from "@chakra-ui/react
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { Registers } from "../redux/register/register.action";
+import { Registers } from "../Redux/register/register.action";
 
 export default function Signup() {
   const [creds, setCreds] = useState({});
@@ -32,9 +32,9 @@ export default function Signup() {
   // }, [handleSubmit]);
 
   return (
-    <Box bgColor='black' color='white' w='100%' h='700px'>
+    <Box bgColor='black' color='white' w='100%' h='800px' >
       
-    <Box border='1px' borderColor='gray.200' type='outline' w={{sm:'350px',md:'400px',lg:'550px'}} height='650px' position='absolute' top='30' left='480' >
+    <Box border='1px' mt='50px' borderColor='gray.200' type='outline' w={{sm:'350px',md:'400px',lg:'550px'}} height='600px' position='absolute' top='30' left='480' >
     
         <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px"}}>Signup</h1>
       

@@ -16,8 +16,8 @@ import {
    
   } from '@chakra-ui/react'
 import { useDispatch, useSelector } from "react-redux";
-import { check, Logins } from "../redux/auth/auth.action";
-import { signInWithGoogle } from "../redux/auth/firebase";
+import { check, Logins } from "../Redux/auth/auth.action";
+import { signInWithGoogle } from "../Redux/auth/firebase";
 
 export default function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -72,9 +72,9 @@ export default function Login() {
   
     return (
       <>
-        <Button  onClick={onOpen}>
+        <div  onClick={onOpen}>
           <BiUser size='25px' />
-        </Button>
+        </div>
         <Drawer size={{xs:'xs',sm:'sm',md:'md'}} placement={placement} onClose={onClose} isOpen={isOpen}>
          
           <DrawerContent bgColor='black' color='white' >
@@ -93,9 +93,9 @@ export default function Login() {
           </Stack>
           </form>
           <Box ml='210px' mt='15px'>Or</Box>
-          <Button ml='35px' variant='outline' mt='15px' w='82%'   onClick={just}>signIn with Google <FcGoogle style={{marginLeft:"15px"}} size='25px'/></Button>
+          <Button ml='35px' variant='outline' mt='15px' w='82%'   onClick={just}>SignIn with Google <FcGoogle style={{marginLeft:"15px"}} size='25px'/></Button>
 
-          <Box display='flex' justifyContent='center' gap='3' mt='10px' >New customer ?  <Link to="/signup">Create an account</Link></Box>
+          <Box display='flex' justifyContent='center' gap='3' mt='10px' >New customer ?  <span onClick={()=>navigate("/signup")}>Create an account</span></Box>
           </DrawerBody>
           </DrawerContent>
         </Drawer>

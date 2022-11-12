@@ -1,16 +1,18 @@
 
 import './App.css';
 import AllRoutes from './component/AllRoutes';
-import Cart from './component/Cart';
+
+import Navbar from './component/navbar/Navbar';
 
 // import {signInWithGoogle} from "./services/firebase"
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
      <AllRoutes/>
      
-    <Cart/>
+    
     </div>
   );
 }

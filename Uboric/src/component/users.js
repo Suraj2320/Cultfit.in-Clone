@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect,useState } from "react";
 import { useDispatch } from "react-redux";
-import { addItemToCart } from "../redux/cart/cart.action";
+import { addItemToCart } from "../Redux/cart/cart.action";
 
 export default function User() {
   const [data,setData]=useState([])

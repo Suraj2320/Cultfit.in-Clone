@@ -4,7 +4,7 @@ import React from 'react'
 function Forgot() {
   return (
    <Box w='100%' h='700px' bgColor='black' color='white'  >
-    <Box w={{sm:'350px',md:'400px',lg:'550px'}} height='600px' border='1px' borderColor='gray.200' position='absolute' top='30' left='480'>
+    <Box w={{sm:'350px',md:'400px',lg:'550px'}} height='600px' border='1px' mt='50px' borderColor='gray.200' position='absolute' top='30' left='480'>
     <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
            
