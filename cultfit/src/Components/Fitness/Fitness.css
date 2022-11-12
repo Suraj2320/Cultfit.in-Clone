@@ -1,0 +1,302 @@
+.fitness-body{
+    /* height: 6390px; */
+    font-family: 'Open Sans', sans-serif;
+}
+.pagemain{
+    background-color: #15171c;
+    /* height: fit-content; */
+}
+
+.Fitnesshome{
+    border: 1px solid black;
+    /* height: 100; */
+    /* width: 100%; */
+    background-image: url('https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1600,q_auto:eco,dpr_1,f_auto,fl_progressive/image/vm/87cee6e2-8554-4c5e-b50f-3f8fbb978b4b.png');  
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+button{
+    /* padding-top: 400px; */
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+.btn{
+  margin-top: 40%;
+  margin-left: 45%;
+  color: coral;
+  font-size: 15px;
+    /* padding: 10px; */
+  font-weight: 600;
+  outline: none;
+  border: none;
+  width: 150px;
+}
+.Offers{
+    padding-top: 10px;
+    margin-top: 200px;
+    margin: auto;
+    justify-content: center;
+    
+    display: flex;
+    gap: 60px;
+    color: #cecece;
+}
+.box{
+    border-radius: 15px;
+    text-align: center;
+    line-height: 40px;
+    width: 20%;
+    height: 150px;
+    border: 1px solid #cecece;
+    background-color: #312f2a;
+    backdrop-filter: blur(50px);
+    margin-bottom: 50px;
+}
+.line1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.line1 > img{
+  width: 100%;
+}
+.line2  {
+    font-size: 40px;
+}
+.eli{
+   color: #ffd065; 
+}
+.liv{
+    color:#d06dbc;
+}
+.line3{
+    font-size: 20px;
+    margin-top: -15px;
+}
+.secondhalf{
+    background-color: #15171c;
+
+    margin-bottom: 6%;
+}
+.para{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    /* margin-top: 2%; */
+}
+.map{
+  width: 80%;
+  margin-top: 4%;
+  margin-left: 10%;
+  margin-bottom: 80px;  
+}
+.At{
+    color: #cecece;
+    text-align: center;
+    line-height: 50px;
+}
+.Trainer{
+    color: #cecece;
+    text-align: center;
+}
+.sd2{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 100px;
+    
+}
+
+.at-home{
+    /* height: 250px; */
+    margin: auto;
+    width: 350px;
+    border: 1px solid #2d3745 ;
+    margin-bottom: 100px;
+    
+    /* border-radius: 15px; */
+
+    
+}
+.BCimg > img {
+    /* background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_400,ar_1.77,q_auto:eco,dpr_1.25,f_auto,fl_progressive//image/diy/40b46505-0b48-431f-ae76-64f6021e2efd); */
+    width: 100%;
+    /* margin-top: 5%; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#content{
+    /* margin-top: 100px; */
+    margin: auto;
+    background-color: #2d3745;
+    height: 200px;
+    width: 350px;
+    border: 1px solid #2d3745;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+.choose,.para{
+    line-height: 150px;
+}
+#table{
+    margin-left: 360px;
+    color: #d2d2d2;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.tablebutton{
+    color: coral;
+    font-size: 15px;
+      /* padding: 10px; */
+    font-weight: 600;
+    outline: none;
+    border: none;
+    width: 150px; 
+}
+.Elite{
+    display: flex;
+    /* grid-template-columns: auto; */
+    column-gap: 40px;
+    margin-top: 100px;
+}
+.EliteContent{
+    width: 45%;
+}
+.Eliteimg {
+    width: 45%;
+}
+
+.Eliteimg  > img{
+    width: 100%;
+    border-radius: 12px;
+
+}
+.marginleft{
+    text-align: left;
+    line-height: 60px;
+    box-sizing: border-box;
+    width: 500px;
+    margin: auto;
+ }
+.cp{
+    color: white;
+    font-size: 20px;
+    margin-left: 120px;
+}
+
+.Span{
+    color:#ffd065;
+    font-weight: 700;
+
+}
+
+.unlim{
+    color: white;
+    font-size: 35px; 
+     margin-left: 120px;
+}
+.Eliteimg{
+    margin-left: 5%;
+}
+
+.btn-try {
+    color: white;
+    background: #23282f;
+    outline: none;
+    border: none;
+    margin-right: 3px;
+    margin-left: 120px;
+    padding: 10px;
+    font-weight: 600;
+    width: 150px;
+    font-size: 15px;
+}
+
+.btn-buy {
+    color: coral;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    width: 150px;
+}
+
+.PRO{
+    display: flex;
+    /* grid-template-columns: auto; */
+    column-gap: 40px;
+    margin-top: 100px;
+}
+.PROContent{
+    width: 45%;
+}
+.PROimg {
+    width: 42%;
+    margin-left: 10%;
+    /* margin-bottom: 2%; */
+}
+
+.PROimg  > img{
+    width: 100%;
+    height: 92%;
+    border-radius: 12px;
+
+}
+.marginleft1{
+    text-align: left;
+    line-height: 60px;
+    box-sizing: border-box;
+    width: 500px;
+    margin-left: 10%;
+ }
+.cp1{
+    color: white;
+    font-size: 20px;
+    margin-left: 120px;
+}
+
+.Span1{
+    color:#ffd065;
+    font-weight: 700;
+
+}
+
+.unlim1{
+    color: white;
+    font-size: 35px; 
+     margin-left: 120px;
+}
+
+
+.btn-try1 {
+    color: white;
+    background: #23282f;
+    outline: none;
+    border: none;
+    margin-right: 3px;
+    margin-left: 120px;
+    padding: 10px;
+    font-weight: 600;
+    width: 150px;
+    font-size: 15px;
+}
+
+.btn-buy1 {
+    color: coral;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    width: 150px;
+}
