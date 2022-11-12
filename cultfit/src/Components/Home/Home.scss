@@ -1,0 +1,827 @@
+.loading__Screen {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100px;
+  }
+}
+
+.homePage {
+  color: white;
+  background-color: rgba(18, 21, 31);
+
+  font-family: "Open Sans", sans-serif;
+
+  &__video-poster-one {
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    video {
+      transition: opacity 600ms ease 0s;
+      position: relative;
+      object-fit: cover;
+      height: 100vh;
+      width: 100%;
+      will-change: transform;
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  &__text-poster-one {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    // flex-direction: column;
+    overflow: hidden;
+    top: 60px;
+    // border: 1px solid red;
+    // justify-content: center;
+
+    &_img-one {
+      // margin: auto auto 275px;
+      z-index: 5;
+      transition: all 1s ease 0s;
+      // width: 500px;
+      opacity: 1;
+      transform: translateY(0px);
+      // border: 1px solid red;
+      margin: 10% 40%;
+
+      img {
+        position: relative;
+        top: 0;
+        // left: 40vw;
+        width: 400px;
+        // z-index: 20;
+      }
+      @media screen and (max-width: 1024px) {
+        & {
+          margin: 10% 25%;
+
+          img {
+            width: 300px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 769px) {
+        & {
+          margin: 10% 20%;
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    &_text {
+      position: absolute;
+      z-index: 5;
+      // border: 1px solid red;
+      transition: all 1s ease 0s;
+      height: fit-content;
+      margin: 25% 30%;
+
+      h4 {
+        text-align: center;
+        cursor: default;
+        margin: 0;
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: -1px;
+      }
+
+      &_btn {
+        button {
+          cursor: pointer;
+          font-family: "Roboto", sans-serif;
+          border: 1px solid transparent;
+          transition: all 250ms ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: white;
+          color: black;
+          font-size: 14px;
+          border-radius: 5px;
+          padding: 11.5px 20px;
+          font-weight: 700;
+          margin: 20px auto;
+
+          &:hover {
+            color: #f06055;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        & {
+          margin: 35% 10%;
+        }
+      }
+
+      @media screen and (max-width: 769px) {
+        & {
+          margin: 50% 5%;
+        }
+      }
+    }
+  }
+}
+// IMAGES CSS SECTION STARTS
+.homePage__images-container {
+  position: inherit;
+  padding: 20px 0;
+  // height: 50vh;
+  &_box {
+    &_row1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 30px;
+      img {
+        width: 500px;
+        opacity: 0.5;
+        @media screen and (max-width: 1000px) {
+          width: 300px;
+          
+        }
+        @media screen and (max-width: 769px) {
+          width: 100%;
+          
+        }
+      }
+    }
+
+    &_row2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // padding: 20px;
+      img {
+        width: 350px;
+        opacity: 0.5;
+        @media screen and (max-width: 1000px) {
+          width: 250px;
+          
+        }
+        @media screen and (max-width: 769px) {
+          width: 100%;
+          
+        }
+        
+      }
+
+      // @media screen and (max-width: 769px) {
+      //   flex-direction: column;
+        
+      // }
+
+      div:nth-child(2) {
+        img {
+          padding-top: 80px;
+          @media screen and (max-width: 769px) {
+         
+            padding-top:0
+          }
+        }
+        //  border: 1px solid red;
+        
+
+      }
+    }
+  }
+
+  &_txt{
+    position: absolute;
+    top: 140vh;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+
+
+    @media screen and (max-width: 769px) {
+     top: 120vh;
+      
+    }
+
+    p{
+      font-size: 35px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      @media screen and (max-width: 1000px) {
+        font-size: 30px;
+        
+      }
+
+      @media screen and (max-width: 769px) {
+        font-size: 20px;
+        
+      }
+    }
+    h4{
+      font-size: 50px;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 40px;
+        
+      }
+
+      @media screen and (max-width: 769px) {
+        font-size: 25px;
+        
+      }
+    }
+  }
+
+  &_txt_new{
+    position: absolute;
+    top: 280vh;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+
+
+    @media screen and (max-width: 769px) {
+     top: 120vh;
+      
+    }
+
+    p{
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      @media screen and (max-width: 1000px) {
+        font-size: 40px;
+        
+      }
+
+      @media screen and (max-width: 769px) {
+        font-size: 30px;
+        
+      }
+    }
+    
+  }
+}
+
+// IMAGES CSS SECTION ENDS
+
+.homePage__cultpass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  position: relative;
+  z-index: 3;
+  // height: 100vh;
+
+  &-background {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -100;
+    overflow: hidden;
+    img {
+      opacity: 0.2;
+      width: 50vw;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    margin-top: 22px;
+    img {
+      width: 250px;
+    }
+    p {
+      text-align: center;
+
+      &:nth-child(2) {
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: 22px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 22px;
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(33, 121, 179);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .homePage__cultpass-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    // align-items: center;
+    align-content: center;
+    // width: 100vw;
+    overflow: hidden;
+    // border: 1px solid red;
+    margin: 22px 0;
+    min-height: 500px;
+
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      // margin: 10px;
+    }
+
+    &-one {
+      // border: 1px solid blue;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      // align-content: flex-end;
+      margin: 10px 20px;
+      position: relative;
+      z-index: inherit;
+
+      &_imgBox {
+        .homePage__cultpass-poster {
+          width: 300px;
+          margin: 22px 0;
+
+          &:hover {
+            width: 310px;
+            transition: all ease-in-out;
+          }
+        }
+
+        &-miniContainer {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 130px;
+          left: 20px;
+          img {
+            &:nth-child(1) {
+              width: 70px;
+              margin-bottom: 5px;
+            }
+            &:nth-child(2) {
+              width: 90px;
+            }
+          }
+        }
+      }
+    }
+
+    .homePage__cultpass-type-one_textBox {
+      p {
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(212, 209, 209);
+        margin: 22px 0;
+      }
+      ul {
+        padding-left: 25px;
+        color: rgb(145, 144, 144);
+        font-weight: bold;
+        line-height: 2;
+        margin: 22px 0;
+      }
+    }
+
+    .homePage__cultpass-type-one_btnBox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0;
+
+      button {
+        &:nth-child(1) {
+          cursor: pointer;
+          font-family: Roboto, sans-serif;
+          border: 1px solid transparent;
+          transition: all 250ms ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgb(255 255 255 / 10%);
+          color: white;
+          backdrop-filter: blur(50px);
+          font-size: 14px;
+          border-radius: 5px;
+          padding: 11.5px 20px;
+          font-weight: 700;
+          width: 45%;
+          &:hover {
+            background: rgb(255 255 255 / 30%);
+          }
+        }
+
+        &:nth-child(2) {
+          cursor: pointer;
+          font-family: Roboto, sans-serif;
+          border: 1px solid transparent;
+          transition: all 250ms ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: white;
+          font-size: 14px;
+          border-radius: 5px;
+          padding: 11.5px 20px;
+          font-weight: 700;
+          width: 45%;
+
+          &:hover {
+            color: #f06055;
+          }
+        }
+      }
+    }
+  }
+}
+
+// POSTER CARDS CSS STARTS
+
+.homePage__posters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 22px 0;
+
+  column-gap: 0;
+
+  align-items: center;
+  position: relative;
+  z-index: 5;
+
+  // border: 1px solid red;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+  }
+
+  &-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_350,ar_1.164,q_auto:eco,dpr_1.0700000524520874,f_auto,fl_progressive//image/test/four-square-card/glass-transform-multi-color-2.png);
+    // padding-bottom: 85.9107%;
+    // height: 0px;
+    width: 400px;
+    height: 400px;
+    margin: 30px 50px;
+    &:hover {
+      width: 420px;
+      height: 420px;
+      transition: all 0.25 ease-in-out;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 300px;
+      height: 300px;
+      margin: 20px 30px;
+      &:hover {
+        width: 320px;
+        height: 320px;
+        transition: all 0.25 ease-in-out;
+      }
+    }
+    @media screen and (max-width: 769px) {
+      width: 300px;
+      height: 300px;
+      margin: 20px 30px;
+    }
+
+    &_text {
+      a {
+        text-decoration: none;
+        color: white;
+
+        .homePage__posters-card_text-titleText {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2% 4%;
+
+          h3 {
+            font-size: 30px;
+            font-weight: 900;
+          }
+
+          img {
+            width: 35px;
+          }
+        }
+
+        .homePage__poster-card_text-subText {
+          padding: 0 4%;
+        }
+      }
+    }
+  }
+
+  &-card2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_350,ar_1.164,q_auto:eco,dpr_1.0700000524520874,f_auto,fl_progressive//image/test/four-square-card/glass-workout-gear.png");
+    // padding-bottom: 85.9107%;
+    // height: 0px;
+    width: 400px;
+    height: 400px;
+    margin: 30px 50px;
+    &:hover {
+      width: 420px;
+      height: 420px;
+      transition: all 0.25 ease-in-out;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 300px;
+      height: 300px;
+      margin: 20px 30px;
+      &:hover {
+        width: 320px;
+        height: 320px;
+        transition: all 0.25 ease-in-out;
+      }
+    }
+    @media screen and (max-width: 769px) {
+      width: 300px;
+      height: 300px;
+      margin: 20px 30px;
+    }
+
+    &_text {
+      a {
+        text-decoration: none;
+        color: white;
+
+        .homePage__posters-card2_text-titleText {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2% 4%;
+
+          h3 {
+            font-size: 30px;
+            font-weight: 900;
+          }
+
+          img {
+            width: 35px;
+          }
+        }
+
+        .homePage__poster-card2_text-subText {
+          padding: 0 4%;
+        }
+      }
+    }
+  }
+}
+
+//POSTER BG IMG
+.homepage__poster-container {
+  position: relative;
+
+  .homepage__poster-bg-img {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+//POSTER BG IMG ENDS
+
+// POSTER CARDS CSS ENDS
+
+// WELLNESS HUB CSS STARTS
+
+.homePage__wellnesshub-container {
+  margin: 0 10%;
+  padding: 5%;
+  width: 80%;
+  // border: 1px solid red;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  border: none;
+  background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,q_auto:eco,dpr_1.0700000524520874,f_auto,fl_progressive/image/test/wellness-widget/wellness_bg2.png);
+  // display: flex;
+  overflow: hidden;
+  // flex-direction: row;
+  position: inherit;
+  z-index: 3000;
+
+
+  // &_text-box {
+  //   // border: 1px solid red;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   &_title {
+  //     // border: 1px solid red;
+  //     margin-bottom: 20%;
+  //     padding-left: 15px;
+
+  //     h4 {
+  //       text-align: left;
+  //       cursor: default;
+  //       margin: 0;
+  //       color: white;
+  //       font-size: 45px;
+  //       font-family: Roboto, sans-serif;
+  //       letter-spacing: 0.01px;
+  //       line-height: 60px;
+  //     }
+
+  //     p {
+  //       text-align: left;
+  //       cursor: default;
+  //       margin: 0;
+  //       color: white;
+  //       font-size: 18px;
+  //       font-family: Roboto, sans-serif;
+  //       letter-spacing: 0px;
+  //       line-height: 22px;
+  //       width: 90%;
+  //     }
+  //   }
+
+  //   &_options {
+  //     color: rgb(67, 67, 67);
+  //     font-size: 18px;
+  //     line-height: 2.1;
+  //     letter-spacing: 0.5px;
+  //     font-weight: 700;
+
+  //     div {
+  //       padding-left: 15px;
+  //       cursor: pointer;
+  //       width: 80%;
+  //       &:hover {
+  //         background-color: white;
+  //         border-radius: 30px;
+  //         color: black;
+  //         display: flex;
+  //         flex-direction: row;
+  //         justify-content: space-between;
+  //         padding: 0 10px;
+  //         &::after {
+  //           content: "\003E";
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  #main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 500;
+  }
+  .div-img {
+   
+  }
+  
+  #imgtag {
+   
+    width: 100%;
+  }
+  #secondmain {
+
+  }
+  a {
+    // border: 1px solid red;
+    text-decoration: none;
+    color: black;
+    
+  }
+  a:hover {
+   
+  }
+  .shadow h2{
+    padding: 5px 10px;
+    cursor: pointer;
+    color: rgb(73, 70, 70);
+    &:hover{
+      background-color: #ffffff;
+      color: black;
+      border-radius: 20px;
+
+    }
+}
+    
+}
+
+// WELLNESS HUB CSS ENDS
+
+// DOWNLOAD CONTAINER CSS STARTS
+
+.download_container-ks {
+  // border: 1px solid red;
+  padding: 40px 0;
+}
+.homePage__download-container {
+  // border: 1px solid red;
+  width: 80%;
+  height: 350px;
+  margin: 0 auto;
+  padding: 40px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  // border: none;
+  position: relative;
+  // background-position: right center;
+  background-image: url(https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1200,ar_2.66,q_auto:eco,dpr_1.0700000524520874,f_auto,fl_progressive//image/test/download-app/download-app-variant-2.png);
+  font-family: Roboto, sans-serif;
+  &-title {
+    // border: 1px solid red;
+    width: 50%;
+    margin: 20px 10px;
+    h3 {
+      font-size: 26px;
+      font-weight: 600;
+      // line-height: 1.5;
+      letter-spacing: 0.7px;
+      margin-bottom: 30px;
+      @media screen and (max-width: 1024px) {
+      font-size: 24px;
+      margin-bottom: 25px;
+      }
+
+      @media screen and (max-width: 769px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 769px) {
+      margin: 10px 5px;
+      width: 80%;
+      }
+    
+  }
+
+  &-img{
+    img{
+      padding: 10px;
+      @media screen and (max-width: 1024px) {
+       width: 150px;
+       
+        }
+  
+      //   @media screen and (max-width: 769px) {
+      //  width: 100px;
+      //   }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+   padding: 20px;
+    }
+}
