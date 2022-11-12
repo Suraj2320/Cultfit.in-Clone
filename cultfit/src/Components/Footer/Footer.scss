@@ -1,0 +1,189 @@
+.footer {
+  background-color: #000000;
+  // color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  text-align: left;
+  cursor: default;
+  margin: 0;
+  color: #cacaca;
+  padding: 80px 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items:center ;
+  box-sizing: border-box;
+  // position:fixed;
+  // z-index: 1000;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+
+  &__logoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    // border: 1px solid red;
+
+    img {
+      width: 150px;
+      @media screen and (max-width: 769px) {
+        width: 100px;
+      }
+    }
+
+    &-text {
+      text-align: left;
+      cursor: default;
+      margin: 0;
+      color: #cacaca;
+      // font-size: 14px;
+      font-family: Inter-Regular, Helvetica Neue, Helvetica, Roboto, Arial,
+        sans-serif;
+      letter-spacing: 0.5px;
+      line-height: 22px;
+      width: 250px;
+      padding-top: 40px;
+
+      @media screen and (max-width: 769px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 769px) {
+      justify-content: start;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__textBoxContainer {
+    display: flex;
+    flex-direction: row;
+    // border: 1px solid red;
+    justify-content: space-between;
+    align-content: center;
+    width: 40%;
+
+    &__textBoxOne {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 2.26;
+      opacity: 0.7;
+    //   margin: 0 20px;
+
+      div {
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__textBoxTwo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 2.26;
+      opacity: 0.7;
+    //   margin: 0 20px;
+
+      div {
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+    &__textBoxThree {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 2.26;
+      opacity: 0.7;
+    //   margin: 0 20px;
+
+      div {
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (max-width: 769px) {
+       
+        width: 100%;
+      }
+   
+  }
+
+  &__storeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+    width: 30%;
+    // border: 1px solid red;
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 150px;
+        margin-bottom: 40px;
+        cursor: pointer;
+
+        @media screen and (max-width: 769px) {
+          width: 100px;
+          flex-direction: column;
+        }
+      }
+    }
+
+    &-social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      cursor: pointer;
+      img {
+        margin: 0 10px;
+
+        @media screen and (max-width: 1024px) {
+          width: 30px;
+          &:nth-child(4) {
+            display: none;
+          }
+
+          &:nth-child(5) {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 769px) {
+          width: 30px;
+
+          &:nth-child(4) {
+            display: none;
+          }
+
+          &:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 769px) {
+       flex-direction: row;
+        width: 100%;
+      }
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 769px) {
+    // font-size: 16px;
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+}
