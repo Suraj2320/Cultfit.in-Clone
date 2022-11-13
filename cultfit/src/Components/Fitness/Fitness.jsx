@@ -35,8 +35,8 @@ export const Fitness = () => {
       <div className="fitness-body" style={{ paddingTop: "60px" }}>
         {/* Start coding from here */}
         <Navbar2/>
-        <div className="pagemain">
-          <div className="Fitnesshome">
+        <div className="pagemain" style={{ paddingTop: "60px" }}>
+          <div className="Fitnesshome" style={{ paddingTop: "680px" }}>
             <button className="btn">TRY FOR FREE</button>
             <div className="Offers">
               <div className="box">

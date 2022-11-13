@@ -3,7 +3,7 @@ import Admin from "./admin";
 import Forgot from "./Forgot";
 import Login from "./Login";
  import Signup from "./signup";
-import User from "./users";
+
 import Cart from './Cart';
 import Home from './Home/Home'
 import {Fitness} from './Fitness/Fitness'
@@ -20,7 +20,7 @@ export default function AllRoutes() {
       <Route path='/store' element={<Store/>} />
       <Route path='/care' element={<Care/>} />
       <Route path="/admin" element={<Admin />} />
-      <Route path="/users" element={<User />} />
+     
       <Route path="/forgot" element={<Forgot />} />
       <Route path='/cart' element={<Cart/>} />
     </Routes>

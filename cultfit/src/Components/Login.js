@@ -89,12 +89,13 @@ export default function Login() {
           <Input type='password' name="password"
         onChange={handleChange} placeholder='Password' />
           <Box onClick={()=>navigate("/forgot")} display="flex" justifyContent='flex-end'>Lost your password?</Box>
-       <Button  type="submit" background={'rgb(131,58,180) linear-gradient(90deg, rgb(131,58,180,1) 0%, rgb(253,29,29,1) 50%, rgb(252,176,69,1) 100%)'}>Submit</Button>
+       {/* <Button  type="submit" w="150px" h="50px" background={'rgb(131,58,180) linear-gradient(90deg, rgb(131,58,180,1) 0%, rgb(253,29,29,1) 50%, rgb(252,176,69,1) 100%)'}>Submit</Button> */}
+       <Box  style={{display:"flex",justifyContent:"center",padding:"1%",border:"1px solid white"}}>Submit</Box>
           </Stack>
         
           </form>
           <Box ml='210px' mt='15px'>Or</Box>
-          <Button ml='35px' variant='outline' mt='15px' w='82%'   onClick={just}>SignIn with Google <FcGoogle style={{marginLeft:"15px"}} size='25px'/></Button>
+          <Box  style={{border:"1px solid white",padding:"1%",margin:"auto",textAlign:"center", display:'flex',justifyContent:"center",gap:"5px"}} variant='outline' mt='15px' w='82%'  onClick={just}>SignIn with Google <FcGoogle  size='25px'/></Box>
 
           <Box display='flex' justifyContent='center' gap='3' mt='10px' >New customer ?  <span onClick={()=>navigate("/signup")}>Create an account</span></Box>
           </DrawerBody>

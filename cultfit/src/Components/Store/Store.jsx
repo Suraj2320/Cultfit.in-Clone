@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Store.css";
-
+import "./Store.scss";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../redux/cart/cart.action";
 export const Store = () => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState("");
-
+  const dispatch=useDispatch()
   const getAllProducts = () => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -14,6 +15,16 @@ export const Store = () => {
   useEffect(() => {
     getAllProducts()
   }, []);
+
+  const handleAdd=(el)=>{
+    dispatch(
+      addItemToCart({
+        ...el,
+        productId: el.id,
+        count: 1,
+      })
+    );
+  }
 
   return (
     <div>
@@ -181,7 +192,7 @@ export const Store = () => {
                 </div>
                 <div className="right">
                   <img className="wrapimg" src={ele.image} alt="" />
-                  <button>Add to cart, yo</button>
+                  <button onClick={()=>handleAdd(ele)}>Add to cart, yo</button>
                 </div>
               </div>
             ))}

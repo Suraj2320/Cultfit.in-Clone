@@ -5,7 +5,7 @@ import "./Care.scss";
 
 const Care = () => {
   return (
-    <div className="care_page">
+    <div className="care_page" style={{marginBottom:"10rem"}}>
       <div className="care-body">
         <div className="storeNav">
           <button>Lab Tests</button>
