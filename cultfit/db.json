@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "A Product that is 1st in the list products",
+      "price": 450
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "A Product that is 2nd in the list of  products",
+      "price": 900
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "A Product that is 3rd in the list of  products",
+      "price": 800
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "description": "A Product that is 4th in the list of  products",
+      "price": 700
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "description": "A Product that is 5th in the list of  products",
+      "price": 600
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "description": "A Product that is 6th in the list of  products",
+      "price": 500
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "description": "A Product that is 7th in the list of  products",
+      "price": 400
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "description": "A Product that is 8th in the list of  products",
+      "price": 300
+    },
+    {
+      "id": 9,
+      "name": "Product 9",
+      "description": "A Product that is 9th in the list of  products",
+      "price": 200
+    }
+  ],
+  "cartItems": []
+}

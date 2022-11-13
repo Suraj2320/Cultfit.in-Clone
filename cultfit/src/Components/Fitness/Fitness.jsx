@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../Footer/Footer";
+import Navbar from "../navbar/Navbar";
 import "./Fitness.css";
 import  {FitnessSlider } from "./FitnessSlider";
 import  {FitnessSlider2}  from "./FitnessSlider2";
@@ -29,7 +31,7 @@ export const Fitness = () => {
     </div>
   ) : (
     <div>
-      {/* <Navbar path="fitness" /> */}
+      <Navbar path="/fitness" />
       <div className="fitness-body" style={{ paddingTop: "60px" }}>
         {/* Start coding from here */}
         <Navbar2/>
@@ -288,7 +290,7 @@ export const Fitness = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
