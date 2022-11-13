@@ -596,7 +596,7 @@ const Home = () => {
         </div>
       </div>
       {/* DOWNLOAD APP ENDS */}
-      <Footer />
+      
     </div>
   );
 };

@@ -8,12 +8,13 @@ function Forgot() {
     <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
            
-      <h1 style={{marginTop:'50px',fontWeight:'bold',fontSize:'25px'}}>Forgot Password?</h1>
-      <h4 style={{marginTop:'20px'}}>Please enter your Email Address. You will receive a link</h4>
-      <h4>to create a new password via Email.</h4>
+      <h1 style={{marginTop:'50px',fontWeight:'bold',fontSize:'25px',marginLeft:"150px"}}>Forgot Password?</h1>
+      <h4 style={{marginTop:'20px',marginLeft:"90px"}}>Please enter your Email Address. You will receive a link</h4>
+      <h4 style={{marginLeft:"140px"}}>to create a new password via Email.</h4>
       <Stack w='md' m='auto' mt='10' gap='5'>
       <Input placeholder='Your Email*' />
-      <Button  background={'rgb(131,58,180) linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)'} w='150px'>Reset Password</Button>
+      {/* <Button  background={'rgb(131,58,180) linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)'} w='150px'>Reset Password</Button> */}
+      <Box  style={{display:"flex",justifyContent:"center",padding:"1%",border:"1px solid white"}}>Submit</Box>
       </Stack>
     </Box>
    </Box>

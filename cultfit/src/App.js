@@ -5,12 +5,14 @@ import { Store } from './Components/Store/Store';
 // import Home from './Components/Home/Home';
 import Navbar from './Components/navbar/Navbar'
 import AllRoutes from './Components/AllRoutes';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <AllRoutes/>
+      <Footer />
     </div>
   );
 }

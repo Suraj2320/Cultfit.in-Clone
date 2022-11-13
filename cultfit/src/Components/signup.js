@@ -36,7 +36,7 @@ export default function Signup() {
       
     <Box border='1px' mt='50px' borderColor='gray.200' type='outline' w={{sm:'350px',md:'400px',lg:'550px'}} height='600px' position='absolute' top='30' left='480' >
     
-        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px"}}>Signup</h1>
+        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px",textAlign:"center"}}>Signup</h1>
       
         <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
@@ -56,7 +56,8 @@ export default function Signup() {
         placeholder="confirm_password"
         onChange={handleChange}
         required />
-        <Button background={'rgb(131,58,180) linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)'} type="submit">Submit</Button>
+        {/* <Button background={'rgb(131,58,180) linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)'} type="submit">Submit</Button> */}
+        <Box  style={{display:"flex",justifyContent:"center",padding:"1%",border:"1px solid white"}}>Submit</Box>
           </Stack>
     </form>
     <Box display='flex' gap='3' justifyContent='center' mt='5' >Already have an account?  <Link to="/">Login</Link></Box>
