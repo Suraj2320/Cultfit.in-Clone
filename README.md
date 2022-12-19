@@ -78,13 +78,6 @@ In order to use the project you need to follow the below steps.
 
 In this project we were able to achieve a near to perfect clone of the original website. As we do not want to overwhelm you with the snapshots, we haven't shared all the pages here.Please fork the repository and then use it on your own. If you want to collaborate with us on this project then please fell free to reach out to us.
 
-<br>
-
-## Video Demo 
-
-https://www.linkedin.com/posts/harshgaur97_project-design-activity-6751535312800952320-1Qce
-
-<br>
 ## Features
 
 1. User can view all the products on the store and buy them
