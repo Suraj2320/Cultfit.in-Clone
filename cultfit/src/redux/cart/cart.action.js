@@ -24,15 +24,15 @@ import {
 
 
 
-export const getCartItems = () => (dispatch) => {
+export const getCartItems = () => async(dispatch) => {
     dispatch({ type: GET_CART_ITEMS_LOADING });
-  return axios
-    .get("http://localhost:8080/cartItems")
-    .then((res) => {
-      console.log("getcartItems",res.data);
-      return dispatch({ type: GET_CART_ITEMS_SUCCESS, payload: res.data });
-    })
-    .catch(() => dispatch({ type: GET_CART_ITEMS_ERROR }));
+ try{
+      console.log("first")
+ }
+    catch(e){
+      console.log(e)
+       dispatch({ type: GET_CART_ITEMS_ERROR })
+    }
 };
 
 

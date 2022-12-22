@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import { store } from './redux/store';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,8 @@ root.render(
       
     <ChakraProvider>
     <Provider store={store}>
-    <App />
+    <GoogleOAuthProvider clientId="903230408812-sev2bujjc68grlgqacku63bks0agvoft.apps.googleusercontent.com"><App /></GoogleOAuthProvider>;
+    
     </Provider>
     
     </ChakraProvider>

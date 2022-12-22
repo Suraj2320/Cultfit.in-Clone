@@ -2,13 +2,13 @@ import { Box, Button, DrawerHeader, Image, Input, Stack } from "@chakra-ui/react
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { Registers } from "../redux/register/register.action";
+import { register } from "../redux/auth/auth.action";
 
 export default function Signup() {
   const [creds, setCreds] = useState({});
   const dispatch = useDispatch();
   const navigate=useNavigate()
-  const { users } = useSelector((store) => store.register);
+  // const { users } = useSelector((store) => store.register);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,52 +16,51 @@ export default function Signup() {
   };
 
   const handleSubmit = (e) => {
-    console.log(creds);
     e.preventDefault();
-    if (creds.password === creds.confirm_password) {
-      // console.log(creds.password);
-      dispatch(Registers(creds));
-      navigate("/")
-    }
-    else{
-        alert("Check Password")
-    }
+  // console.log(creds)
+   dispatch(register(creds))
+   navigate("/")
   };
   // useEffect(() => {
   //   //console.log(users);
   // }, [handleSubmit]);
 
   return (
-    <Box bgColor='black' color='white' w='100%' h='800px' >
+    <Box bgColor='black' h='900px'>
+    <Box  color='white'    >
       
-    <Box border='1px' mt='50px' borderColor='gray.200' type='outline' w={{sm:'350px',md:'400px',lg:'550px'}} height='600px' position='absolute' top='30' left='480' >
-    
-        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px",textAlign:"center"}}>Signup</h1>
+    <Box   borderColor='gray.200' type='outline' w={{sm:'80vw',md:'50vw',lg:'30vw'}} height='600px' m={"auto"} >
+    <Box border='1px'  borderColor='gray.200'>
+        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"100px",textAlign:"center"}}>Signup</h1>
       
         <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
             
-    <form style={{marginLeft:"50px",marginTop:"40px"}} onSubmit={handleSubmit}>
-      <Stack gap='2' w={{sm:'sm',md:'sm',lg:'sm'}} ml='8'>
+    <form style={{marginTop:"40px"}} onSubmit={handleSubmit}>
+      <Stack gap='2' p={4} >
           <Input  type="text"
-        name="email"
-        placeholder="email"
+        name="username"
+        placeholder="username"
         onChange={handleChange}
         required/>
-          <Input type='password'  name="password"
+          <Input type='email'  name="email"
+        placeholder="email"
+        onChange={handleChange}
+        required />
+        <Input type='password'  name="password"
         placeholder="password"
         onChange={handleChange}
         required />
-        <Input type='password'  name="confirm_password"
-        placeholder="confirm_password"
-        onChange={handleChange}
-        required />
         {/* <Button background={'rgb(131,58,180) linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)'} type="submit">Submit</Button> */}
-        <Box  style={{display:"flex",justifyContent:"center",padding:"1%",border:"1px solid white"}}>Submit</Box>
-          </Stack>
+        <Input type="submit"  style={{display:"flex",justifyContent:"center",alignItems:"center",height:"40px",padding:"1%",borderRadius:"5px"}} b={0} background={'rgb(131,58,180) linear-gradient(90deg, rgb(131,58,180,1) 0%, rgb(253,29,29,1) 50%, rgb(252,176,69,1) 100%)'}/>
+         </Stack>
     </form>
-    <Box display='flex' gap='3' justifyContent='center' mt='5' >Already have an account?  <Link to="/">Login</Link></Box>
+    <Box ml='210px' mt='10px'>Or</Box>
+    <Box display='flex' gap='3' justifyContent='center'mb={"20px"} >Already have an account?  <Link to="/">Login</Link></Box>
     </Box>
+    </Box>
+    </Box>
+
     </Box>
   );
 }

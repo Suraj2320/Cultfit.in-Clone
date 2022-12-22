@@ -106,9 +106,7 @@ const handleLoginClick=()=>{
         </div>
         {/* <div className="login__popup">login</div>
         <div className="cart__popup">cart</div> */}
-        <div className="disclaimer__popup">
-          It’s a project for educational purpose only and not commercial purpose
-        </div>
+        
       </div>
       <div className="m-nav">
         <div className="m-nav__hamburgar">

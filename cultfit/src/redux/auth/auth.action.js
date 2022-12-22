@@ -7,29 +7,41 @@ import {
   LOGOUT
 } from "./auth.types";
 
-export const check = (creds) => async (dispatch) => {
-  dispatch({ type: LOGIN_REQUEST });
+
+
+
+import {
+  REGISTER_ERROR,
+  REGISTER_REQUEST,
+  REGISTER_SUCCESS
+} from "./auth.types";
+
+export const register = (creds) => async (dispatch) => {
+  dispatch({ type: REGISTER_REQUEST });
   try {
-    let token = "123abc456";
-    dispatch({ type: LOGIN_SUCCESS, payload: token });
+    console.log(creds);
+
+    let res=await axios.post("http://localhost:8080/users/signup",creds)
+    console.log(res.data)
+    
+     dispatch({ type: REGISTER_SUCCESS });
   } catch (e) {
-    dispatch({ type: LOGIN_ERROR });
+    dispatch({ type: REGISTER_ERROR });
   }
 };
+
+
 
 export const Logins = (creds) => async (dispatch) => {
   //console.log(creds.email);
   dispatch({ type: LOGIN_REQUEST });
   try {
-    if (creds.email === "admin" && creds.password === "qwerty@123") {
-      let token = "qwerty@123";
+   
+    let response=await axios.post('http://localhost:8080/users/login',creds)
+    console.log(response.data.token)
       //console.log(token);
-      dispatch({ type: LOGIN_SUCCESS, payload: token });
-    } else {
-      let response = await axios.post("https://reqres.in/api/login", creds);
-      console.log(response.data);
       dispatch({ type: LOGIN_SUCCESS, payload: response.data.token });
-    }
+    
   } catch (e) {
     dispatch({ type: LOGIN_ERROR });
   }
