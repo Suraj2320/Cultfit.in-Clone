@@ -12,7 +12,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <AllRoutes/>
-      <Footer />
+       <Footer />
+     
     </div>
   );
 }

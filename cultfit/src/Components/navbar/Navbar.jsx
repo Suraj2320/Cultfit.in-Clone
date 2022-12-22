@@ -1,31 +1,33 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
-import { Link,  useNavigate } from "react-router-dom";
-import { RiLogoutCircleRLine } from 'react-icons/ri';
+import { Link, useNavigate } from "react-router-dom";
+import { RiLogoutCircleRLine } from "react-icons/ri";
 import { useSelector, useDispatch } from "react-redux";
 import Login from "../Login";
 import { Logout } from "../../redux/auth/auth.action";
-
+import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
-    const { isAuth, token } = useSelector((store) => store.auth);
+  const { isAuth, token } = useSelector((store) => store.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-const handleLoginClick=()=>{
-    if(isAuth){
-        console.log(isAuth)
-        dispatch(Logout())
+  // const onClickHam = () => {
+  //   console.log("hello");
+  // };
+
+  const handleLoginClick = () => {
+    if (isAuth) {
+      console.log(isAuth);
+      dispatch(Logout());
+    } else {
+      navigate("/");
     }
-    else{
-        navigate("/")
-    }
-    
-}
+  };
 
   return (
     <>
-      <div  className="navbar" >
+      <div className="navbar">
         <div className="navbar__logo">
           <Link to="/" className="navbar__links-link">
             <img
@@ -37,32 +39,22 @@ const handleLoginClick=()=>{
         <div className="navbar__links">
           <ul>
             <li>
-              <Link
-                to="/fitness" className="navbar__links-link" >
+              <Link to="/fitness" className="navbar__links-link">
                 fitness
               </Link>
             </li>
             <li>
-              
-              <Link
-                to="/care"
-                className="navbar__links-link">
+              <Link to="/care" className="navbar__links-link">
                 care
               </Link>
             </li>
-            <li >
-             
-              <Link
-                to="/mind"
-                className="navbar__links-link" >
+            <li>
+              <Link to="/mind" className="navbar__links-link">
                 mind
               </Link>
             </li>
             <li>
-             
-              <Link
-                to="/store"
-                className="navbar__links-link">
+              <Link to="/store" className="navbar__links-link">
                 store
               </Link>
             </li>
@@ -89,16 +81,13 @@ const handleLoginClick=()=>{
           <div className="navbar__cart-button">
             <button>GET APP</button>
           </div>
-          <div onClick={handleLoginClick}
-            className="navbar__cart-profile" >
-            {
-                isAuth?<RiLogoutCircleRLine/>: <Login/>
-            }
-          
+          <div onClick={handleLoginClick} className="navbar__cart-profile">
+            {isAuth ? <RiLogoutCircleRLine /> : <Login />}
           </div>
 
-          <div className="navbar__cart-cart" >
-            <img onClick={()=>navigate("/cart")}
+          <div className="navbar__cart-cart">
+            <img
+              onClick={() => navigate("/cart")}
               src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/cart-dark-theme.svg"
               alt="cart"
             />
@@ -112,10 +101,14 @@ const handleLoginClick=()=>{
       </div>
       <div className="m-nav">
         <div className="m-nav__hamburgar">
-          <div></div>
+          <div ></div>
           <div></div>
           <div></div>
         </div>
+
+        {/* <HamburgerIcon color={"white"} onClick={onClickHam}>
+         
+        </HamburgerIcon> */}
 
         <div className="m-nav__logo">
           <img
