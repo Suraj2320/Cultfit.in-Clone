@@ -10,7 +10,8 @@ import {
     isAuth: !!token,
     token: token,
     loading: false,
-    error: false
+    error: false,
+    
   };
   
   export const authReducer = (state = initial, { type, payload }) => {

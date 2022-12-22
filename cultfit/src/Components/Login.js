@@ -17,7 +17,11 @@ import {
   } from '@chakra-ui/react'
 import { useDispatch, useSelector } from "react-redux";
 import { check, Logins } from "../redux/auth/auth.action";
-import { signInWithGoogle } from "../redux/auth/firebase";
+// import { signInWithGoogle } from "../redux/auth/firebase";
+import axios from "axios";
+import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import { LOGIN_SUCCESS } from "../redux/auth/auth.types";
+
 
 export default function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -37,38 +41,35 @@ export default function Login() {
     };
 
     const handleSubmit = (e) => {
-      console.log(creds);
       e.preventDefault();
-      if (creds.email === "admin" || creds.email === "eve.holt@reqres.in") {
-        dispatch(Logins(creds));
-      }
-       else {
-        let x = users.find(
-          (el) => el.email == creds.email && el.password == creds.password
-        );
-        if (x) {
-          console.log(x);
-          dispatch(check(creds));
-        }
-        else{
-          alert("wrong credentials")
-        }
-      }
+      console.log(creds);
+     
+     dispatch(Logins(creds))
     };
 
     useEffect(() => {
       console.log(token);
-      if (token === "qwerty@123" && isAuth) {
-        navigate("/admin");
-      } else if (isAuth) {
-        navigate("/users");
-      }
+      if (isAuth) {
+        navigate("/");
+      } 
     }, [isAuth]);
 
-    const just=()=>{
-      console.log("first")
-      dispatch(signInWithGoogle())
+  const logi=useGoogleLogin({
+    onSuccess: async response=>{
+    try{
+      const data=await  axios.get("https://www.googleapis.com/oauth2/v3/userinfo",{
+        headers:{
+          "Authorization":`Bearer ${response.access_token}`
+        }
+      })
+    console.log(data.data,response.access_token)
+    dispatch({ type: LOGIN_SUCCESS, payload: response.access_token });
     }
+    catch(e){
+      console.log(e)
+    }
+  }
+  })
   
     return (
       <>
@@ -90,12 +91,20 @@ export default function Login() {
         onChange={handleChange} placeholder='Password' />
           <Box onClick={()=>navigate("/forgot")} display="flex" justifyContent='flex-end'>Lost your password?</Box>
        {/* <Button  type="submit" w="150px" h="50px" background={'rgb(131,58,180) linear-gradient(90deg, rgb(131,58,180,1) 0%, rgb(253,29,29,1) 50%, rgb(252,176,69,1) 100%)'}>Submit</Button> */}
-       <Box  style={{display:"flex",justifyContent:"center",padding:"1%",border:"1px solid white"}}>Submit</Box>
+       <Input type="submit"  style={{display:"flex",justifyContent:"center",alignItems:"center",height:"40px",padding:"1%",borderRadius:"5px"}} b={0} background={'rgb(131,58,180) linear-gradient(90deg, rgb(131,58,180,1) 0%, rgb(253,29,29,1) 50%, rgb(252,176,69,1) 100%)'}/>
           </Stack>
         
           </form>
           <Box ml='210px' mt='15px'>Or</Box>
-          <Box  style={{border:"1px solid white",padding:"1%",margin:"auto",textAlign:"center", display:'flex',justifyContent:"center",gap:"5px"}} variant='outline' mt='15px' w='82%'  onClick={just}>SignIn with Google <FcGoogle  size='25px'/></Box>
+          <Box  style={{display:"flex",justifyContent:"center",alignItems:"center",gap:"5px",height:"40px",padding:"1%",border:"1px solid white",borderRadius:"5px"}} cursor="pointer" m={"auto"} w={"25vw"} onClick={logi}>
+            continue with Google <FcGoogle/>
+         {/* <GoogleLogin onSuccess={credentialResponse=>{
+            console.log(credentialResponse)
+          }}onError={()=>{
+            console.log('login Failed')
+          }}  /> */}
+          
+          </Box>
 
           <Box display='flex' justifyContent='center' gap='3' mt='10px' >New customer ?  <span onClick={()=>navigate("/signup")}>Create an account</span></Box>
           </DrawerBody>
