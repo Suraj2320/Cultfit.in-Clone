@@ -73,6 +73,7 @@ let discount=Math.floor((total/100)*10)
                 alert(result.data.msg);
             
               },
+              
               prefill: {
                 name: 'example name',
                 email: 'email@example.com',
