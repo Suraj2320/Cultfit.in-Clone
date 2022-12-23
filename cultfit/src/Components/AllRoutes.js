@@ -3,6 +3,7 @@ import Admin from "./admin";
 import Forgot from "./Forgot";
 import Login from "./Login";
  import Signup from "./signup";
+ import {  Womens } from "./pages/womens";
 
 import Cart from './Cart';
 import Home from './Home/Home'
@@ -18,6 +19,7 @@ export default function AllRoutes() {
       <Route path='/fitness' element={<Fitness/>} />
       <Route path='/mind' element={<Mind/>} />
       <Route path='/store' element={<Store/>} />
+      <Route path="/:head" element={<Womens/>}/>
       <Route path='/care' element={<Care/>} />
       <Route path="/admin" element={<Admin />} />
      

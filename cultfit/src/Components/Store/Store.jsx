@@ -121,11 +121,11 @@ const catogory= (cat)=>{
         {/* //Second navbar */}
         <div className="storeNav">
           {" "}
-          <p onClick={()=>catogory("sport")}>Sport</p>
-          <p onClick={()=>catogory("men")}>Men</p>
+          <p onClick={()=>catogory("sport")}>SPORTS</p>
+          <p onClick={()=>catogory("men")}>MEN</p>
           {/* <a href="./womens">Suraj</a> */}
-        <p onClick={()=>catogory("women")}>Women</p>
-          <p onClick={()=>catogory("cycling")}>Cycling</p>
+        <p onClick={()=>catogory("women")}>WOMEN</p>
+          <p onClick={()=>catogory("sport")}>CYCLING</p>
         </div>
 
         {/* slider start */}
