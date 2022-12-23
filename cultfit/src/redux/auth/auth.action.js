@@ -21,7 +21,7 @@ export const register = (creds) => async (dispatch) => {
   try {
     console.log(creds);
 
-    let res=await axios.post("http://localhost:8080/users/signup",creds)
+    let res=await axios.post("https://cultfit.onrender.com/users/signup",creds)
     console.log(res.data)
     
      dispatch({ type: REGISTER_SUCCESS });
@@ -37,7 +37,7 @@ export const Logins = (creds) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
    
-    let response=await axios.post('http://localhost:8080/users/login',creds)
+    let response=await axios.post('https://cultfit.onrender.com/users/login',creds)
     console.log(response.data.token)
       //console.log(token);
       dispatch({ type: LOGIN_SUCCESS, payload: response.data.token });

@@ -26,12 +26,12 @@ export default function Signup() {
   // }, [handleSubmit]);
 
   return (
-    <Box bgColor='black' h='900px'>
+    <Box bgColor='black' h='700px'>
     <Box  color='white'    >
-      
+      <br/> <br/> <br/>
     <Box   borderColor='gray.200' type='outline' w={{sm:'80vw',md:'50vw',lg:'30vw'}} height='600px' m={"auto"} >
     <Box border='1px'  borderColor='gray.200'>
-        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"100px",textAlign:"center"}}>Signup</h1>
+        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px",textAlign:"center"}}>Signup</h1>
       
         <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
