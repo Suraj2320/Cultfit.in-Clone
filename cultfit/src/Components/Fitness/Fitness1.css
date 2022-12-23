@@ -1,0 +1,45 @@
+.navBox{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #393a3b ;
+    color: #808181;
+    width: 1484px
+}
+.nav-link{
+    margin: 1rem;
+}
+.bannerBox{
+ background-image:url('https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1600,q_auto:eco,dpr_1,f_auto,fl_progressive/image/vm/20dd4fd1-3170-4252-ae36-fc323fd8f49f.png');
+   height: 800px;
+   width: 1484px;
+   background-position: center center;
+   background-repeat: no-repeat;
+   /* background-attachment: fixed; */
+   background-size: cover;
+}
+.onBannerBox{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    width: 1484px;
+    cursor: pointer;
+    margin-top: -22rem;
+}
+.pass1{
+    height: 164px;
+    width: 347px;
+    border: 10 px solid black;
+    background-color: #312f2a;
+    color: aliceblue;
+    border-radius: 2rem;
+    margin: .8rem;
+}
+
+.slider1{
+    /* margin:auto; */
+    /* width: 1195px; */
+    width: 1184px;
+    /* margin-left: 150px; */
+    /* margin-right: 150px; */
+}
