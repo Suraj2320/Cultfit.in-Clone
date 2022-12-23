@@ -73,7 +73,7 @@ let discount=Math.floor((total/100)*10)
                 alert(result.data.msg);
             
               },
-              
+
               prefill: {
                 name: 'example name',
                 email: 'email@example.com',
@@ -86,8 +86,6 @@ let discount=Math.floor((total/100)*10)
                 color: '#80c0f0',
               },
             };
-    
-           
             const paymentObject = new window.Razorpay(options);
             paymentObject.open();
           } catch (err) {
