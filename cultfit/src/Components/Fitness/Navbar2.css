@@ -3,17 +3,14 @@
 .second-nav{
     background-color: #393a3b ;
     color: #808181;
-    height: 50px;
-    padding: 10px;
-    box-sizing: border-box;
-    justify-content: center;
-    padding-left: 400px;
+   display: flex;
+   justify-content: space-evenly;
 }
 
 .nav-link {
     text-decoration: none;
     color: #b3b3b4;
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
     font-size: 18px;
     font-weight: 600;
 }
