@@ -7,15 +7,13 @@ import Navbar from "./Components/navbar/Navbar";
 import AllRoutes from "./Components/AllRoutes";
 import Footer from "./Components/Footer/Footer";
 import Fitness1 from "./Components/Fitness/Fitness1";
-import { FitnessGif } from "./Components/Fitness/FitnessGif";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <AllRoutes/>
+      <Navbar />
+      <AllRoutes />
       <Footer />
-      
     </div>
   );
 }

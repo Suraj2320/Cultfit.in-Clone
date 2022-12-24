@@ -18,18 +18,19 @@ export const FitnessGif = () => {
   return (
     <div className="mainslide">
       <Slider {...settings}>
-        <Box className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Box bg="#0a1017" className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Image src="https://thumbs.gfycat.com/ReadyEasyCicada-size_restricted.gif" />
 
           <Box p="6">
             <Flex>
-              <Box display="flex" alignItems="baseline">
+              <Box bg="#0a1017" display="flex" alignItems="baseline">
                 <Box
                   color="gray.500"
                   fontWeight="semibold"
                   fontSize="xs"
                   textTransform="uppercase"
                   ml="2"
+                  bg="#0a1017"
                 >
                   <Heading as="h2">FEAUZERA</Heading>
                 </Box>
@@ -38,12 +39,14 @@ export const FitnessGif = () => {
               <Text
                   style={{
                     marginLeft: "6.5rem",
-                    marginTop: ".2rem",
+                  
                     border: "1px solid orange",
                     padding: ".8rem",
                     borderRadius: ".5rem",
                     cursor: "pointer",
                     textAlign:'center'
+                    ,color:'#ffffff'
+
                   }}
                   as="h2"
                 >
@@ -51,19 +54,19 @@ export const FitnessGif = () => {
                 </Text>
               </Box>
             </Flex>
-            <Box style={{ marginTop: "1.8rem" }}>
+            <Box >
               <Text>
                 <u>Unlimited access starting at 580/mo</u>
               </Text>
             </Box>
           </Box>
         </Box>
-        <Box className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Box bg="#0a1017" className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Image src="https://thumbs.gfycat.com/PleasedTangibleColt-size_restricted.gif" />
 
           <Box p="6">
             <Flex>
-              <Box display="flex" alignItems="baseline">
+              <Box bg="#0a1017" display="flex" alignItems="baseline">
                 <Box
                   color="gray.500"
                   fontWeight="semibold"
@@ -78,12 +81,13 @@ export const FitnessGif = () => {
               <Text
                   style={{
                     marginLeft: "6.5rem",
-                    marginTop: ".2rem",
+                    
                     border: "1px solid orange",
                     padding: ".8rem",
                     borderRadius: ".5rem",
                     cursor: "pointer",
                     textAlign:'center'
+                    ,color:'#ffffff'
                   }}
                   as="h2"
                 >
@@ -91,19 +95,19 @@ export const FitnessGif = () => {
                 </Text>
               </Box>
             </Flex>
-            <Box style={{ marginTop: "1.8rem" }}>
+            <Box >
               <Text>
                 <u>Unlimited access starting at 580/mo</u>
               </Text>
             </Box>
           </Box>
         </Box>
-        <Box className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Box bg="#0a1017" className="gifSlider" maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Image src="https://thumbs.gfycat.com/ClassicQuarrelsomeBighornedsheep-size_restricted.gif" />
 
           <Box p="6">
             <Flex>
-              <Box display="flex" alignItems="baseline">
+              <Box bg="#0a1017" display="flex" alignItems="baseline">
                 <Box
                   color="gray.500"
                   fontWeight="semibold"
@@ -118,12 +122,13 @@ export const FitnessGif = () => {
                 <Text
                   style={{
                     marginLeft: "6.5rem",
-                    marginTop: ".2rem",
+                   
                     border: "1px solid orange",
                     padding: ".8rem",
                     borderRadius: ".5rem",
                     cursor: "pointer",
                     textAlign:'center'
+                    ,color:'#ffffff'
                   }}
                   as="h2"
                 >
@@ -131,7 +136,7 @@ export const FitnessGif = () => {
                 </Text>
               </Box>
             </Flex>
-            <Box style={{ marginTop: "1.8rem" }}>
+            <Box >
               <Text>
                 <u>Unlimited access starting at 580/mo</u>
               </Text>
