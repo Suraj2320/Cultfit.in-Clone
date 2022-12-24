@@ -53,13 +53,13 @@ import axios from "axios";
         justifyContent="left"
         marginLeft="1000px"
       >
-        <Select placeholder="Sortby">
+        {/* <Select placeholder="Sortby">
           <option value="lowtohigh">Low to high</option>
           <option value="hightolow">High to low</option>
-        </Select>
+        </Select> */}
       </Box>
       <br />
-      <div className="storeNavv" mt="">
+      {/* <div className="storeNavv" mt="">
           {" "}
           <p >T-SHIRT</p>
           <p >JOGGERS</p>
@@ -67,11 +67,11 @@ import axios from "axios";
           <p >TRACKSUIT</p>
           <p >TANKTOP</p>
           <p >GIFTBOX</p>
-          {/* <a href="./womens">Suraj</a> */}
+         
         <p >JACKET</p>
           <p >SOCKS</p>
           <p>BOYSHORTS</p>
-        </div>
+        </div> */}
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={4}>
         {data?.map((post) => (         
           <Box justifyContent="center" w="350px">
@@ -93,7 +93,10 @@ import axios from "axios";
             <Text fontSize="xs" color="black">{post.desc}</Text>
             <Text  fontSize="md" as='b'>₹ {post.price}</Text>
              <br/>
-            <Link to={`/SingleW/${post.title}`}>Add To cart</Link>
+             <Box>
+              Add To Cart
+             </Box>
+            {/* <Link to={`/SingleW/${post.title}`}>Add To cart</Link> */}
             {/* <Button bg="black">Add To Cart</Button> */}     
                        
           </Box>       
