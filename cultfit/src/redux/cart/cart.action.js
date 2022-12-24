@@ -1,4 +1,5 @@
 // Cart Actions here
+import { async } from "@firebase/util";
 import axios from "axios";
 
 import {
@@ -27,7 +28,9 @@ import {
 export const getCartItems = () => async(dispatch) => {
     dispatch({ type: GET_CART_ITEMS_LOADING });
  try{
-      console.log("first")
+    let res=await axios.get(`https://cultfit.onrender.com/cart/`)
+    //console.log(res.data)
+    dispatch({type:  GET_CART_ITEMS_SUCCESS,payload:res.data    })
  }
     catch(e){
       console.log(e)
@@ -40,17 +43,19 @@ export const getCartItems = () => async(dispatch) => {
 
 
 
-export const addItemToCart = (cartInfo) => (dispatch) => {
-
+export const addItemToCart = (cartInfo) => async(dispatch) => {
+//console.log(cartInfo)
   dispatch({ type: ADD_ITEM_TO_CART_LOADING });
 
-  return axios
+  try{
+let res=await  axios.post("https://cultfit.onrender.com/cart/", {...cartInfo,count:1} )
 
-    .post("http://localhost:8080/cartItems", { ...cartInfo })
-    .then(({ data }) => {
-      dispatch({ type: ADD_ITEM_TO_CART_SUCCESS, payload: data });
-    })
-    .catch(() => dispatch({ type: ADD_ITEM_TO_CART_ERROR }));
+//console.log(res.data)
+alert("Item Added to cart")
+
+  }catch(e){
+console.log(e)
+  }
 };
 
 
@@ -60,28 +65,35 @@ export const addItemToCart = (cartInfo) => (dispatch) => {
 export const removeItemFromCart = (cartId) => (dispatch) => {
   dispatch({ type: REMOVE_CART_ITEMS_LOADING });
   return axios
-    .delete(`http://localhost:8080/cartItems/${cartId}`)
+    .delete(`https://cultfit.onrender.com/cart/${cartId}`)
     .then((r) => {
       dispatch({ type: REMOVE_CART_ITEMS_SUCCESS, payload: { id: cartId } });
+      alert("Item Removed from cart")
+      dispatch(getCartItems())
     })
     .catch(() => dispatch({ type: REMOVE_CART_ITEMS_ERROR }));
    
+
 };
 
 
 
 
-export const updateCartItem = (cartId, update) => (dispatch) => {
+export const updateCartItem = (cartId, update) =>async (dispatch) => {
   dispatch({ type: UPDATE_CART_ITEMS_LOADING });
-  return axios
-    .patch(`http://localhost:8080/cartItems/${cartId}`, {
-      ...update,
-    })
-    .then(({ data }) => {
-      dispatch({ type: UPDATE_CART_ITEMS_SUCCESS, payload: data });
-    })
+  
+  console.log(cartId,update)
 
-    .catch(() => dispatch({ type: UPDATE_CART_ITEMS_ERROR }));
+try{
+let res=await axios.put(`https://cultfit.onrender.com/cart/${cartId}`,update)
+console.log(res,"checing update")
+
+dispatch(getCartItems())
+}
+catch(e){
+
+}
+    // .catch(() => dispatch({ type: UPDATE_CART_ITEMS_ERROR }));
 };
 
 
@@ -94,4 +106,4 @@ dispatch(getCartItems())
   catch(e){
 console.log(e)
   }
-}
+

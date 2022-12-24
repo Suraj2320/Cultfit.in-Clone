@@ -96,7 +96,7 @@ let discount=Math.floor((total/100)*10)
         document.body.appendChild(script);
       }
 
- console.log("cartafteradd",data);
+ //console.log("cartafteradd",data);
   
   return (
     <>
@@ -123,12 +123,12 @@ let discount=Math.floor((total/100)*10)
                        <Box    h='100%' display='flex' flexDirection='column' justifyContent="space-evenly"> 
                        <h1 style={{fontWeight:"600",fontSize:"20px",textAlign:"left"}}>{el.title}</h1>
                        <h3 style={{textAlign:"left"}}>{el.category}</h3>
-                       <Box display='flex' justifyContent='space-around' g="50px">
-                        <p >Price: ₹{el.price}</p>
+                       <Box display='flex' justifyContent='space-around' g={{sm:"10vw",lg:"20vw"}}>
+                        <p style={{textAlign:"left"}}>Price: ₹{el.price}</p>
                          <Box display='flex'>
-                            <Box border="1px"  backgroundColor='red' color='white'  h='30px' w='18px' textAlign={"center"}  onClick={() => handleUpdate(el._id,el.count - 1)}>-</Box>
+                            <Box border="1px"  backgroundColor='red' color='white'  h='30px' w='18px' textAlign={"center"} cursor={"pointer"}  onClick={() => handleUpdate(el._id,el.count - 1)}>-</Box>
                             <span style={{border:"1px solid black",height:"28px",width:"18px",marginLeft:"0px",textAlign:"center"}} >{el.count}</span>
-                            <Box border="1px"  backgroundColor='green' color='white' h='30px' w='18px' textAlign={"center"} onClick={() => handleUpdate(el._id,el.count + 1)}>+</Box>
+                            <Box border="1px"  backgroundColor='green' color='white' h='30px' w='18px' textAlign={"center"} cursor={"pointer"} onClick={() => handleUpdate(el._id,el.count + 1)}>+</Box>
                          </Box>
                        
                        </Box>
@@ -148,7 +148,7 @@ let discount=Math.floor((total/100)*10)
                 <br/>
                 <Box display='flex' justifyContent='space-around'><h3  style={{fontSize:"20px",fontWeight:"bold"}}>Total Payable</h3><h3 style={{fontSize:"20px",fontWeight:"bold"}}>₹ {Math.floor(total-discount)}</h3></Box>
                 <br/>
-                <Box  background='black' textAlign={"center"} p={"3"} w={{sm:"40vw",md:"25vw",lg:"20vw"}} m={"auto"} color='white' onClick={()=>loadRazorpay(Math.floor(total-discount))}>PAY NOW</Box>
+                <Box  background='black' textAlign={"center"} p={"3"} w={{sm:"40vw",md:"25vw",lg:"20vw"}} m={"auto"} color='white' cursor={"pointer"} onClick={()=>loadRazorpay(Math.floor(total-discount))}>PAY NOW</Box>
             </Box>
            
 
