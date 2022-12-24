@@ -2,7 +2,8 @@ import {
     LOGIN_ERROR,
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
-    LOGOUT
+    LOGOUT,
+    VERIFICATION
   } from "./auth.types";
   
   let token = localStorage.getItem("token");
@@ -11,7 +12,7 @@ import {
     token: token,
     loading: false,
     error: false,
-    
+    message:""
   };
   
   export const authReducer = (state = initial, { type, payload }) => {
@@ -30,7 +31,8 @@ import {
           token: payload,
           isAuth: true,
           loading: false,
-          error: false
+          error: false,
+          message:""
         };
       }
       case LOGIN_ERROR: {
@@ -39,6 +41,12 @@ import {
           loading: false,
           error: true
         };
+      }
+      case VERIFICATION:{
+        return{
+          ...state,
+          message:payload
+        }
       }
       case LOGOUT: {
         console.log("logout")

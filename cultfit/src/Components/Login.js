@@ -33,7 +33,7 @@ export default function Login() {
     const navigate = useNavigate();
     // const {users}=useSelector(store=>store.register)
     const users = JSON.parse(localStorage.getItem("user"));
-    console.log("hey", users);
+   // console.log("hey", users);
 
     const handleChange = (e) => {
       const { name, value } = e.target;

@@ -6,6 +6,7 @@ import { Select } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { async } from "@firebase/util";
 import axios from "axios";
+import { addItemToCart } from "../../redux/cart/cart.action";
 
 // import ProductCard1 from "../components/ProductCard1";
 
@@ -16,7 +17,7 @@ import axios from "axios";
   const params=useParams()
   console.log(params)
   // const womensData = useSelector((store) => store.womens.womens);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const getData=async ()=>{
      try{
@@ -31,6 +32,9 @@ import axios from "axios";
    getData()
   }, []);
 
+  const handleAdd=(data)=>{
+    dispatch(addItemToCart(data))
+  }
 
   console.log("data is here" ,data)  
   return (
@@ -93,7 +97,7 @@ import axios from "axios";
             <Text fontSize="xs" color="black">{post.desc}</Text>
             <Text  fontSize="md" as='b'>₹ {post.price}</Text>
              <br/>
-            <Link to={`/SingleW/${post.title}`}>Add To cart</Link>
+            <Box background='black' textAlign={"center"} color='white' p={"1"} w={{sm:"11vw",md:"9vw",lg:"8vw"}} cursor={"pointer"} onClick={()=>handleAdd(post)}>Add To cart</Box>
             {/* <Button bg="black">Add To Cart</Button> */}     
                        
           </Box>       

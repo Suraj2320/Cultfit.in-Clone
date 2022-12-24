@@ -4,7 +4,8 @@ import {
   LOGIN_ERROR,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGOUT
+  LOGOUT,
+  VERIFICATION
 } from "./auth.types";
 
 
@@ -21,9 +22,9 @@ export const register = (creds) => async (dispatch) => {
   try {
     console.log(creds);
 
-    let res=await axios.post("http://localhost:8080/users/signup",creds)
+    let res=await axios.post("https://cultfit.onrender.com/users/signup",creds)
     console.log(res.data)
-    
+    alert(`your otp is ${res.data.otp}`)
      dispatch({ type: REGISTER_SUCCESS });
   } catch (e) {
     dispatch({ type: REGISTER_ERROR });
@@ -37,13 +38,14 @@ export const Logins = (creds) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
    
-    let response=await axios.post('http://localhost:8080/users/login',creds)
+    let response=await axios.post('https://cultfit.onrender.com/users/login',creds)
     console.log(response.data.token)
       //console.log(token);
       dispatch({ type: LOGIN_SUCCESS, payload: response.data.token });
     
   } catch (e) {
     dispatch({ type: LOGIN_ERROR });
+    alert("Wrong Credentials")
   }
 };
 
@@ -53,3 +55,14 @@ export const Logout = ()=>(dispatch) => {
 };
 
 
+export const verify=(creds)=>async(dispatch)=>{
+  console.log(creds)
+
+  try{
+    let response=await axios.post("https://cultfit.onrender.com/users/verification",{"creds":creds})
+    console.log(response)
+    dispatch({type:VERIFICATION,payload:response.data.message})
+  }catch(e){
+    alert("Wrong OTP")
+  }
+}

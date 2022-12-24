@@ -41,7 +41,7 @@ import {
         return { ...state, getCartItems: { loading: true, error: false } };
       }
       case GET_CART_ITEMS_SUCCESS: {
-        console.log(payload);
+       // console.log(payload);
         return { ...state, data: payload, getCartItems: { loading: false } };
       }
       case GET_CART_ITEMS_ERROR: {
