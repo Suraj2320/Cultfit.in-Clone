@@ -2,7 +2,7 @@
 
 Here is the Link
 
-https://cultfit-aayan269.vercel.app/
+https://cultfit-two.vercel.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
