@@ -57,13 +57,13 @@ import { addItemToCart } from "../../redux/cart/cart.action";
         justifyContent="left"
         marginLeft="1000px"
       >
-        <Select placeholder="Sortby">
+        {/* <Select placeholder="Sortby">
           <option value="lowtohigh">Low to high</option>
           <option value="hightolow">High to low</option>
-        </Select>
+        </Select> */}
       </Box>
       <br />
-      <div className="storeNavv" mt="">
+      {/* <div className="storeNavv" mt="">
           {" "}
           <p >T-SHIRT</p>
           <p >JOGGERS</p>
@@ -71,11 +71,11 @@ import { addItemToCart } from "../../redux/cart/cart.action";
           <p >TRACKSUIT</p>
           <p >TANKTOP</p>
           <p >GIFTBOX</p>
-          {/* <a href="./womens">Suraj</a> */}
+         
         <p >JACKET</p>
           <p >SOCKS</p>
           <p>BOYSHORTS</p>
-        </div>
+        </div> */}
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={4}>
         {data?.map((post) => (         
           <Box justifyContent="center" w="350px">
@@ -97,7 +97,7 @@ import { addItemToCart } from "../../redux/cart/cart.action";
             <Text fontSize="xs" color="black">{post.desc}</Text>
             <Text  fontSize="md" as='b'>₹ {post.price}</Text>
              <br/>
-            <Box background='black' textAlign={"center"} color='white' p={"1"} w={{sm:"11vw",md:"9vw",lg:"8vw"}} cursor={"pointer"} onClick={()=>handleAdd(post)}>Add To cart</Box>
+
             {/* <Button bg="black">Add To Cart</Button> */}     
                        
           </Box>       

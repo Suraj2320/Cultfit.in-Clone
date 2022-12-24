@@ -101,6 +101,19 @@
         letter-spacing: -1px;
       }
 
+      @media screen and (max-width: 769px) {
+        h4 {
+          text-align: center;
+          cursor: default;
+          margin: 0;
+          color: white;
+          font-size: 20px;
+          font-weight: 300;
+          font-family: "Open Sans", sans-serif;
+          letter-spacing: -1px;
+        }
+      }
+
       &_btn {
         button {
           cursor: pointer;
@@ -277,6 +290,14 @@
   }
 }
 
+@media screen and (max-width: 769px){
+  .homePage__cultpass-title > p{
+  
+    font-size: 10px;
+    
+  }
+}
+
 // IMAGES CSS SECTION ENDS
 
 .homePage__cultpass {
@@ -329,6 +350,8 @@
       }
     }
   }
+
+  
 
   .homePage__cultpass-type {
     display: flex;
@@ -719,26 +742,20 @@
     position: relative;
     z-index: 500;
   }
-  .div-img {
-   
-  }
+  
   
   #imgtag {
    
     width: 100%;
   }
-  #secondmain {
-
-  }
+ 
   a {
     // border: 1px solid red;
     text-decoration: none;
     color: black;
     
   }
-  a:hover {
-   
-  }
+
   .shadow h2{
     padding: 5px 10px;
     cursor: pointer;
