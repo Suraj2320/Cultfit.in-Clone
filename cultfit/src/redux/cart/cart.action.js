@@ -107,3 +107,4 @@ dispatch(getCartItems())
 console.log(e)
   }
 
+}
