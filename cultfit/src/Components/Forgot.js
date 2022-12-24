@@ -4,6 +4,7 @@ import React from 'react'
 function Forgot() {
   return (
    <Box w='100vw' h='700px' bgColor='black' color='white'  >
+     <br/> <br/> <br/>
     <Box  w={{sm:'100vw',md:'50vw',lg:'30vw'}} height='600px' border='1px'  borderColor='gray.200'  m={"auto"}>
     <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />

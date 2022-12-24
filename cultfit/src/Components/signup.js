@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { register } from "../redux/auth/auth.action";
+import OTP from "./otp";
 
 export default function Signup() {
+  const [find,setFind]=useState(false)
   const [creds, setCreds] = useState({});
   const dispatch = useDispatch();
   const navigate=useNavigate()
@@ -19,19 +21,21 @@ export default function Signup() {
     e.preventDefault();
   // console.log(creds)
    dispatch(register(creds))
-   navigate("/")
+   setFind(true)
+  //  navigate("/")
   };
   // useEffect(() => {
   //   //console.log(users);
   // }, [handleSubmit]);
 
   return (
-    <Box bgColor='black' h='900px'>
+    <Box bgColor='black' h='700px'>
     <Box  color='white'    >
-      
+      <br/> <br/> <br/>
+      {find?<OTP/>:
     <Box   borderColor='gray.200' type='outline' w={{sm:'80vw',md:'50vw',lg:'30vw'}} height='600px' m={"auto"} >
     <Box border='1px'  borderColor='gray.200'>
-        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"100px",textAlign:"center"}}>Signup</h1>
+        <h1 style={{fontWeight:"bold",fontSize:"25px",marginTop:"20px",textAlign:"center"}}>Signup</h1>
       
         <Image m='auto' mt='70px' src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_75,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/curefit-logo-white.svg" />
             <Image  m='auto' mt='15px'  src='https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_135,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cf-name-white.png' />
@@ -58,7 +62,7 @@ export default function Signup() {
     <Box ml='210px' mt='10px'>Or</Box>
     <Box display='flex' gap='3' justifyContent='center'mb={"20px"} >Already have an account?  <Link to="/">Login</Link></Box>
     </Box>
-    </Box>
+    </Box>}
     </Box>
 
     </Box>
