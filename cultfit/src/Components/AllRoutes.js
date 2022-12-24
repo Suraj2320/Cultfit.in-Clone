@@ -11,12 +11,13 @@ import {Fitness} from './Fitness/Fitness'
 import Care from './Care/Care'
 import {Mind} from './Mind/Mind'
 import {Store} from './Store/Store'
+import Fitness1 from "./Fitness/Fitness1";
 export default function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/signup" element={<Signup />} />
-      <Route path='/fitness' element={<Fitness/>} />
+      <Route path='/fitness' element={<Fitness1/>} />
       <Route path='/mind' element={<Mind/>} />
       <Route path='/store' element={<Store/>} />
       <Route path="/:head" element={<Womens/>}/>

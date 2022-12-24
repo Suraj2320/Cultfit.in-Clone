@@ -83,3 +83,15 @@ export const updateCartItem = (cartId, update) => (dispatch) => {
 
     .catch(() => dispatch({ type: UPDATE_CART_ITEMS_ERROR }));
 };
+
+
+export const alldlt=()=>async (dispatch)=>{
+  try{
+let res=await axios.delete(`https://cultfit.onrender.com/cart/`)
+console.log(res)
+dispatch(getCartItems())
+  }
+  catch(e){
+console.log(e)
+  }
+}
